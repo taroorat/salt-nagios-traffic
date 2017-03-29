@@ -1,0 +1,12 @@
+interface: 192.168.1.100
+auto_accept: True
+file_roots:
+    net-snmp:
+        - /home/salt/net-snmp
+
+client_acl_blacklist:
+    users:
+        - root
+        - '^(?!sudo_).*$'
+    modules:
+        - cmd 
