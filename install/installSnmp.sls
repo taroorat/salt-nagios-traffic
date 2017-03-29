@@ -31,13 +31,9 @@ check_traffic_install:
     - name: /usr/local/nagios/libexec/check_traffic.sh
     - source: salt://install/files/check_traffic.sh
     - mode: 755
-    - user: nagios
-    - group: nagios
+    - user: root
+    - group: root
 
-/var/tmp/check_traffic_127.0.0.1_2__itnms.hist_dat_64:
-  file.managed:
-    - user: nagios
-    - group: nagios
 
 /usr/local/nagios/etc/nrpe.cfg:
   file.append:
